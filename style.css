@@ -1,0 +1,263 @@
+/* ERIC MAYER CSS RESET */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+*, *:before, *:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+
+/* CUSTOM STYLES */
+/* TYPOGRAPHY */
+body {
+    font-family: 'Titillium Web', Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    padding-bottom: 60px;
+}
+
+h1 {
+    font-size: 90px;
+    font-weight: 900;
+    color: #231f20;
+    text-transform: uppercase;
+}
+
+h2 {
+    font-size: 18px;
+    font-weight: 700;
+    padding: 14px 0;
+}
+
+blockquote {
+    font-size: 64px;
+    font-weight: 200;
+    font-style: italic;
+    padding-bottom:17px;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+.link {
+    font-size: 13px;
+    color: #673ab7;
+    text-decoration: none;
+    border-bottom: 1px solid #673ab7;
+    padding-bottom: 3px
+}
+
+.link:hover {
+    padding-bottom: 5px
+}
+
+.list li {
+    line-height: 2.13;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.list li:before {
+    content: "\25CF";
+    float: left;
+    margin-left: -15px;
+    color: #673ab7;
+}
+
+.list li:nth-last-child(1):before, .list li.has-sublist:before {
+    content: "";
+}
+
+.list.sub {
+    margin-left: 20px;
+}
+
+.list.sub li:before {
+    display: none;
+}
+
+
+/* LAYOUT */
+.wrap {
+     max-width: 1180px;
+     margin: 0 auto;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.content {
+    padding: 60px 80px;
+    overflow: auto;
+}
+
+.content-block.left {
+    width: 40%;
+}
+
+.content-block.right {
+    width: 60%;
+}
+
+
+/* UI COMPONENTS */
+.button {
+    font-size: 14px;
+    font-weight: 700;
+    color: #ffffff;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 8px 18px;
+    background-color: #673ab7;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+
+.button.close {
+    background-color: #235CF1;
+}
+
+
+/* HERO */
+.hero {
+    min-height: 533px;
+    background-color: #f2f2f2;
+    text-align: center;
+}
+
+.hero .intro {
+    display: inline-block;
+    font-weight: 700;
+    letter-spacing: 4px;
+    color: #231f20;
+    text-transform: uppercase;
+    padding: 62px 0 140px;
+}
+
+.hero .title:after {
+    content: '';
+    display: block;
+    margin: 19px auto;
+    width: 336px;
+    height: 10px;
+    background-color: #673fb4;
+}
+
+.hero .date {
+    display: inline-block;
+    font-size: 18px;
+    color: #231f20;
+    margin: 54px auto;
+    font-weight: 700;
+}
+
+.date sup {
+    font-size: 14px;
+    position: relative;
+    top: -3px;
+}
+
+
+/* FOOTER */
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding: 16px;
+    background-color: #ffffff;
+    box-shadow: 0 -1px 4px 0 rgba(0, 0, 0, 0.1);
+    clear: both;
+}
+
+.footer .button, footer p {
+    float: right;
+}
+
+.footer p {
+    font-size: 13px;
+    font-weight: 600;
+    color: #808080;
+    margin: 0 16px;
+}
+
+
+/* FORM */
+#forma {
+    display:none;
+    float:left;
+}
+
+#forma input {
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 400;
+    color: #aaa;
+    text-indent: 5px;
+    border: 1px solid #aaa;
+    padding: 6px 3px 5px;
+    margin-right: 4px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+
+#forma input:focus {
+    color: #235CF1;
+    border: 1px solid #235CF1;
+}
+
+#show:target #forma {
+    display: inline-block;
+}
+
+#show:target #hide {
+    display: none;
+}
